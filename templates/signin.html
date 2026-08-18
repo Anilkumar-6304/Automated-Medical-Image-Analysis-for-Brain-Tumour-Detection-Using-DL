@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In | Brain Tumor Detection Using Deep Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0f9b8e, #0a3d62);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            inset: 0;
+            background: url('{{ url_for("static", filename="inp2.png") }}') center/cover no-repeat;
+            opacity: 0.15;
+        }
+
+        .signin-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(18px);
+            border-radius: 22px;
+            padding: 45px 40px;
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.9s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffe082;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #e0f2f1;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: none;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            box-shadow: 0 0 0 3px rgba(255, 224, 130, 0.6);
+        }
+
+        .btn-signin {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #004d40;
+            background: linear-gradient(135deg, #ffe082, #ffca28);
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        .btn-signin:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 202, 40, 0.6);
+        }
+
+        .links {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 14px;
+            color: #e0f2f1;
+        }
+
+        .links a {
+            color: #ffe082;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            font-size: 12px;
+            color: #cfd8dc;
+        }
+
+        @media (max-width: 480px) {
+            .signin-wrapper {
+                padding: 35px 25px;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg-pattern"></div>
+
+<div class="signin-wrapper">
+    <div class="logo">Brain Tumor Detection Using Deep Learning</div>
+    <div class="subtitle">
+        Secure Login to the<br>
+        Brain Tumor Detection Using Deep Learning>
+
+    <form method="post">
+        <div class="input-group">
+            <input type="text" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+
+        <button type="submit" class="btn-signin">Sign In</button>
+    </form>
+
+    <div class="links">
+        New user? <a href="/signup">Create an account</a>
+    </div>
+
+    <footer>
+        🔐 Secure academic access • Deep Learning Healthcare Project
+    </footer>
+</div>
+
+</body>
+</html>

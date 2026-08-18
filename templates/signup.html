@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-card {
+            width: 380px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .signup-card h1 {
+            color: #00ffd5;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .signup-card p {
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 12px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.9);
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            color: #666;
+            font-size: 14px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:valid + label {
+            top: -8px;
+            background: #2c5364;
+            padding: 0 6px;
+            color: #00ffd5;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(90deg, #00ffd5, #00c6ff);
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        .signup-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ffd5;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .footer-text a {
+            color: #00ffd5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-card">
+        <h1>Create Account</h1>
+        <p>Join the platform and get started</p>
+
+        <form method="post">
+            <div class="input-group">
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+
+        <div class="footer-text">
+            Already have an account?
+            <a href="/signin">Sign In</a>
+        </div>
+    </div>
+
+</body>
+</html>

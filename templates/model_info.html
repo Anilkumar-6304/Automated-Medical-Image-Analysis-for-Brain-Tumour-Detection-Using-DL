@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Information</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.1);
+            padding: 50px;
+            border-radius: 18px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: #00ffd5;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #00c6ff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #00ffd5;
+            color: #000;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 Brain Tumor Detection Model Information</h1>
+
+    <p>
+        This system utilizes a deep learning–based Convolutional Neural Network (CNN) for the automated detection
+        and classification of brain tumors from MRI images.
+        By analyzing structural and textural patterns within brain scans,
+        the model assists in identifying abnormal growths and categorizing them into clinically relevant classes.
+        The objective of this system is to support radiologists and clinicians in early-stage tumor screening and decision-making.
+    </p>
+
+    <h2>Dataset</h2>
+    <p>
+        The model is trained on a curated MRI brain image dataset containing multiple tumor categories.
+        Each image is labeled into one of four classes: "No Tumor", "Pituitary Tumor", "Meningioma", or "Glioma".
+        The dataset includes scans with varying contrast, orientations, and resolutions,
+        enabling the model to generalize effectively across diverse patient data.
+    </p>
+
+    <h2>Preprocessing</h2>
+    <p>
+        Prior to model training and inference, all MRI images are resized to a uniform dimension (150x150 pixels)
+        to maintain consistency.
+        Pixel intensity values are normalized to enhance convergence during training.
+        These preprocessing steps help reduce noise, improve feature extraction,
+        and increase the reliability of tumor classification.
+    </p>
+
+    <h2>Model Architecture</h2>
+    <p>
+        The core of the system is a Convolutional Neural Network (CNN) designed for medical image analysis.
+        It consists of stacked convolutional and pooling layers that learn spatial features such as edges,
+        shapes, and tumor boundaries.
+        The extracted features are flattened and passed through fully connected layers,
+        with a softmax output layer that predicts one of the four brain tumor classes.
+    </p>
+
+    <h2>Prediction & Interpretation</h2>
+    <p>
+        When an MRI image is submitted, the model computes the probability score for each tumor class.
+        The class with the highest probability is selected as the final prediction.
+        Along with the predicted label, the system provides interpretive suggestions and medical guidance,
+        helping users understand the result and the recommended next steps for clinical consultation.
+    </p>
+
+    <h2>Applications</h2>
+    <ul>
+        <li>Assist radiologists in preliminary brain tumor screening.</li>
+        <li>Support early detection and classification of brain tumors.</li>
+        <li>Provide an educational platform for medical imaging research.</li>
+        <li>Enable AI-assisted diagnosis in remote or resource-limited settings.</li>
+    </ul>
+
+    <h2>Limitations & Notes</h2>
+    <p>
+        This system is intended as a decision-support tool and should not replace professional medical diagnosis.
+        Final clinical decisions must be made by qualified healthcare professionals.
+        Model accuracy may vary depending on MRI quality, scan type, and imaging artifacts.
+        Continuous validation and expert review are recommended before clinical deployment.
+    </p>
+
+    <a href="{{ url_for('home') }}" class="btn">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>
