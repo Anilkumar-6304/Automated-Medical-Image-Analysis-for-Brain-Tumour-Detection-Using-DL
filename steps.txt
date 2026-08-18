@@ -1,0 +1,57 @@
+problem statement
+objective:
+abstract:wt ur project,proble,rectify,tech,alg
+10 lines(prob, objective,tech, models(cnn()))
+introd
+literarture survey
+existing method
+proposed ''
+
+project requirements:
+software: anaconda /idle
+models/algorithm: CNN 
+technologies: dl, image processing(cv)
+database: brain images
+### flow chart#######
+###traing ###
+data collection from onlin or offline sources
+data pre-processing(resize, conversion(bgr to rgb))
+data visualization--graphs, image displays
+data spltting if needed
+construct dl cnn empty model
+(input,hidden,output)
+convolutional
+pooling
+flatten
+fully connected layer
+bias function(activation, loss, optimizers)
+ aply only train part dataset to cnn  empty model
+trained cnn model
+convert trained model to pretrained model(h5,json,pkl,.pt,pth,cfg, weight)
+# inference mode
+load pre-traine models
+browse input image
+pre-porcess
+dat visualization
+aply pre-process input image to pretrained model
+classification result
+suggestions
+
+train.ipyng()
+main.py
+front end:html,css
+backend: flask,pretrained model files, input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
